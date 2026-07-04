@@ -43,3 +43,4 @@ export function createCard(topic) {
 
     return card;
 }
+

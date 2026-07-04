@@ -12,21 +12,32 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <!-- SIDEBAR -->
-    <aside class="sidebar" id="sidebar">
-      <h2 class="logo">Vodecault</h2>
+<body>
 
-      <nav>
-        <ul id="nav-list">
-          <!-- JS will fill this -->
-        </ul>
-      </nav>
-    </aside>
-    
-    <!--Main Content -->
-    <main id="app"></main>
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <h2 class="logo">Vodecault</h2>
+            <nav>
+                <ul id="nav-list"></ul>
+            </nav>
+        </aside>
+
+        <main id="app">
+
+            <!-- TOP BAR MUST STAY HERE -->
+            <div class="top-bar">
+                <input id="search" type="text" placeholder="Search topics..." />
+            </div>
+
+            <!-- DYNAMIC CONTENT GOES HERE -->
+            <div id="content"></div>
+
+        </main>
+
+    </div>
 
     <script type="module" src="js/app.js"></script>
-  </body>
+
+</body>
 </html>
