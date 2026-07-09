@@ -8,5 +8,19 @@ console.log("🚀 Vodecault initialized");
 
 const content = document.querySelector("#content");
 const navList = document.querySelector("#nav-list");
+
+//initial render
 renderTopics(content, topics, createCard);
-renderSidebar(navList, categories);
+
+//render sidebar
+renderSidebar(navList, categories, (selectedCategory) => {
+    if (selectedCategory === "All") {
+        renderTopics(content, topics, createCard);
+        return;
+    }
+
+    const filteredTopics = topics.filter(topic =>
+        topic.category === selectedCategory
+    );
+    renderTopics(content, filteredTopics, createCard);
+});
