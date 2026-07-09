@@ -1,46 +1,67 @@
+import { isFavorite, saveFavorite, removeFavorite, getFavorites } from "./favorites.js";
+
+console.log({
+  isFavorite,
+  saveFavorite,
+  removeFavorite,
+});
+
 export function createCard(topic) {
+  const card = document.createElement("article");
+  card.classList.add("card");
 
-    const card = document.createElement("article");
-    card.classList.add("card");
+  // HEADER
+  const title = document.createElement("h2");
+  title.textContent = topic.title;
 
-    // HEADER
-    const title = document.createElement("h2");
-    title.textContent = topic.title;
+  const meta = document.createElement("p");
+  meta.textContent = `${topic.category} • ${topic.difficulty}`;
 
-    const meta = document.createElement("p");
-    meta.textContent = `${topic.category} • ${topic.difficulty}`;
+  const favButton = document.createElement("button");
 
-    card.append(title, meta);
+  const updateFavButton = () => {
+    favButton.textContent = isFavorite(topic.id)
+      ? "★ Saved"
+      : "☆ Add to Favorites";
+  };
 
-    // SECTIONS
-    topic.sections.forEach(section => {
+  updateFavButton();
 
-        const wrapper = document.createElement("div");
-        wrapper.classList.add("section");
+  favButton.addEventListener("click", () => {
+    if (isFavorite(topic.id)) {
+      removeFavorite(topic.id);
+    } else {
+      saveFavorite(topic.id);
+    }
+    updateFavButton();
+  });
 
-        const button = document.createElement("button");
-        button.textContent = section.title;
+  card.append(title, meta, favButton);
 
-        const content = document.createElement("pre");
-        content.textContent = section.content;
-        content.style.display = "none";
+  // SECTIONS
+  topic.sections.forEach((section) => {
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("section");
 
-        let open = false;
+    const button = document.createElement("button");
+    button.textContent = section.title;
 
-        button.addEventListener("click", () => {
+    const content = document.createElement("pre");
+    content.textContent = section.content;
+    content.style.display = "none";
 
-            open = !open;
+    let open = false;
 
-            content.style.display = open ? "block" : "none";
-            button.textContent = open
-                ? `Hide ${section.title}`
-                : section.title;
-        });
+    button.addEventListener("click", () => {
+      open = !open;
 
-        wrapper.append(button, content);
-        card.append(wrapper);
+      content.style.display = open ? "block" : "none";
+      button.textContent = open ? `Hide ${section.title}` : section.title;
     });
 
-    return card;
-}
+    wrapper.append(button, content);
+    card.append(wrapper);
+  });
 
+  return card;
+}
