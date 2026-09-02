@@ -48,5 +48,19 @@ body {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+}
+
+/*opening description box, lets text wrap*/
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+
+    background: #1a1d24;
+    padding: 1rem;
+    border-radius: 8px;
+
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
