@@ -48,9 +48,9 @@ export function createCard(topic) {
 
     const content = document.createElement("pre");
     content.textContent = section.content;
-    content.style.display = "none";
+    content.style.display = "block";
 
-    let open = false;
+    let open = true;
 
     button.addEventListener("click", () => {
       open = !open;
