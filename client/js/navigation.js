@@ -5,5 +5,6 @@ export const categories = [
     "Node",
     "Express",
     "Git",
-    "Algorithms"
+    "Algorithms",
+    "Java"
 ];
