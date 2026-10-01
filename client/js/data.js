@@ -5074,6 +5074,45 @@ key={employee.id}
     ],
   },
   {
+    id: "Java-1",
+
+    title: "Java Notes",
+
+    category: "Java",
+
+    difficulty: "mid",
+
+    sections: [
+      {
+        title: "Description",
+        content: `
+        
+public class MyProfile {
+public static void main(String[] args) {   
+String name = "Mark";
+int age = 35;
+double desiredSalary = 100000.25;
+char gender = 'm';
+boolean lookingForJob = true;
+
+	}
+}
+        
+        `,
+      },
+      {
+        title: "Syntax",
+        content: `MT
+            `,
+      },
+      {
+        title: "Example",
+        content: `MT
+            `,
+      },
+    ],
+  },
+  {
     id: "MT",
 
     title: "MT",
