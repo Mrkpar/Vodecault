@@ -142,3 +142,55 @@ console.log(newLength); // 4
 ```
 
 **Remember:** `.push()` adds to the original array and returns its new length.
+
+---
+
+## Finding the next perfect square
+
+### `Math.sqrt()` and `Number.isInteger()`
+
+Use `Math.sqrt(number)` to calculate a number's square root.
+
+Use `Number.isInteger(value)` to check whether that square root is a whole number. If it is, the original number is a perfect square.
+
+```javascript
+Math.sqrt(121);                    // 11
+Number.isInteger(Math.sqrt(121));  // true
+
+Math.sqrt(114);                    // approximately 10.677
+Number.isInteger(Math.sqrt(114));  // false
+```
+
+### Find the next perfect square
+
+If `sq` is already a perfect square:
+
+1. Calculate its square root.
+2. Add 1 to that square root.
+3. Multiply the new root by itself.
+
+If the square root is not an integer, return `-1`.
+
+```javascript
+function findNextSquare(sq) {
+    const root = Math.sqrt(sq);
+
+    if (Number.isInteger(root)) {
+        return (root + 1) * (root + 1);
+    }
+
+    return -1;
+}
+```
+
+Examples:
+
+```javascript
+findNextSquare(121); // 144 (12 * 12)
+findNextSquare(625); // 676 (26 * 26)
+findNextSquare(114); // -1 (not a perfect square)
+```
+
+**Important:** Add 1 to the square root, not to the original number. For example, with `sq = 121`, calculate `(11 + 1) * (11 + 1)`, not `(121 + 1) * (121 + 1)`.
+
+**Remember:** `Math.sqrt()` calculates the root; `Number.isInteger()` checks whether the root is a whole number.
