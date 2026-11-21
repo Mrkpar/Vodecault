@@ -4,6 +4,8 @@ A full-stack programming documentation platform built from scratch.
 
 The goal of this project is to learn web development by creating an interactive documentation website containing explanations, examples, exercises, and coding playgrounds.
 
+The site also includes a TTI Practice area with JavaScript problem-solving notes and a searchable, expandable JavaScript methods reference.
+
 Built with:
 
 - HTML
