@@ -2,6 +2,8 @@
 
 A growing quick-reference for the JavaScript methods, syntax, and problem-solving patterns that may be useful in the TTI test.
 
+**[Open the interactive JavaScript Method Library](./methods.html)** — browse the core built-in methods and properties in alphabetical order, search by name, filter by category, and click an entry to expand its explanation and example.
+
 The goal is to keep each entry short: what it does, when to use it, a small example, and important edge cases.
 
 ## Finding a value in an array
