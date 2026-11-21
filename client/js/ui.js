@@ -35,23 +35,41 @@ export function createCard(topic) {
 
   card.append(title, meta, favButton);
 
-  topic.sections.forEach((section, index) => {
+  const isReferenceEntry = topic.difficulty === "Reference";
+  const description = isReferenceEntry
+    ? topic.sections.find((section) => section.title === "What it does")
+    : null;
+
+  if (description) {
+    const summary = document.createElement("p");
+    summary.classList.add("card-description");
+    summary.textContent = description.content;
+    card.append(summary);
+  }
+
+  topic.sections.forEach((section) => {
+    if (isReferenceEntry && section.title === "What it does") {
+      return;
+    }
+
     const wrapper = document.createElement("div");
     wrapper.classList.add("section");
 
     const button = document.createElement("button");
     button.type = "button";
-    button.textContent = section.title;
-    button.setAttribute("aria-expanded", "true");
 
     const sectionContent = document.createElement("pre");
     sectionContent.textContent = section.content;
-    sectionContent.style.display = "block";
+
+    let open = !isReferenceEntry;
+    button.textContent = open ? `Hide ${section.title}` : `Show ${section.title}`;
+    button.setAttribute("aria-expanded", String(open));
+    sectionContent.style.display = open ? "block" : "none";
 
     button.addEventListener("click", () => {
-      const open = sectionContent.style.display === "none";
+      open = !open;
       sectionContent.style.display = open ? "block" : "none";
-      button.textContent = open ? section.title : section.title;
+      button.textContent = open ? `Hide ${section.title}` : `Show ${section.title}`;
       button.setAttribute("aria-expanded", String(open));
     });
 
