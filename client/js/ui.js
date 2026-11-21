@@ -1,23 +1,20 @@
-import { isFavorite, saveFavorite, removeFavorite, getFavorites } from "./favorites.js";
-
-console.log({
-  isFavorite,
-  saveFavorite,
-  removeFavorite,
-});
+import { isFavorite, saveFavorite, removeFavorite } from "./favorites.js";
 
 export function createCard(topic) {
   const card = document.createElement("article");
   card.classList.add("card");
 
-  // HEADER
   const title = document.createElement("h2");
   title.textContent = topic.title;
 
   const meta = document.createElement("p");
-  meta.textContent = `${topic.category} • ${topic.difficulty}`;
+  meta.classList.add("card-meta");
+  meta.textContent = [topic.category, topic.difficulty]
+    .filter(Boolean)
+    .join(" • ");
 
   const favButton = document.createElement("button");
+  favButton.type = "button";
 
   const updateFavButton = () => {
     favButton.textContent = isFavorite(topic.id)
@@ -38,28 +35,27 @@ export function createCard(topic) {
 
   card.append(title, meta, favButton);
 
-  // SECTIONS
-  topic.sections.forEach((section) => {
+  topic.sections.forEach((section, index) => {
     const wrapper = document.createElement("div");
     wrapper.classList.add("section");
 
     const button = document.createElement("button");
+    button.type = "button";
     button.textContent = section.title;
+    button.setAttribute("aria-expanded", "true");
 
-    const content = document.createElement("pre");
-    content.textContent = section.content;
-    content.style.display = "block";
-
-    let open = true;
+    const sectionContent = document.createElement("pre");
+    sectionContent.textContent = section.content;
+    sectionContent.style.display = "block";
 
     button.addEventListener("click", () => {
-      open = !open;
-
-      content.style.display = open ? "block" : "none";
-      button.textContent = open ? `Hide ${section.title}` : section.title;
+      const open = sectionContent.style.display === "none";
+      sectionContent.style.display = open ? "block" : "none";
+      button.textContent = open ? section.title : section.title;
+      button.setAttribute("aria-expanded", String(open));
     });
 
-    wrapper.append(button, content);
+    wrapper.append(button, sectionContent);
     card.append(wrapper);
   });
 
