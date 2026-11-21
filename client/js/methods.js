@@ -840,6 +840,30 @@ export const methodTopics = [
     ]
   },
   {
+    "id": "tti-method-string-methods-includes",
+    "title": ".includes()",
+    "category": "String Methods",
+    "difficulty": "Reference",
+    "sections": [
+      {
+        "title": "What it does",
+        "content": "Checks whether a string contains the supplied text. Returns true or false."
+      },
+      {
+        "title": "Example",
+        "content": "'hello world'.includes('world')"
+      },
+      {
+        "title": "Result",
+        "content": "true"
+      },
+      {
+        "title": "Remember",
+        "content": "Matching is case-sensitive."
+      }
+    ]
+  },
+  {
     "id": "tti-method-string-methods-length-string",
     "title": ".length (string)",
     "category": "String Methods",
@@ -1220,6 +1244,30 @@ export const methodTopics = [
       {
         "title": "Remember",
         "content": "Rounds toward negative infinity."
+      }
+    ]
+  },
+  {
+    "id": "tti-method-math-number-math-trunc",
+    "title": "Math.trunc()",
+    "category": "Math & Number",
+    "difficulty": "Reference",
+    "sections": [
+      {
+        "title": "What it does",
+        "content": "Removes the decimal part of a number, keeping only the integer part."
+      },
+      {
+        "title": "Example",
+        "content": "Math.trunc(4.9)\nMath.trunc(-4.9)"
+      },
+      {
+        "title": "Result",
+        "content": "4\n-4"
+      },
+      {
+        "title": "Remember",
+        "content": "Truncates toward zero. Unlike Math.floor(), it does not always round down."
       }
     ]
   },
