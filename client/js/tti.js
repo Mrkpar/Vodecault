@@ -139,7 +139,7 @@ export const ttiTopics = [
       },
       {
         "title": "Complete example",
-        "content": "function isKiss(words) {\n    const allWords = words.split(' ');\n    const wordCount = allWords.length;\n    const hasLongWord = allWords.some(word => word.length > wordCount);\n\n    if (hasLongWord) {\n        return 'Keep It Simple Stupid';\n    } else {\n        return 'Good work Joe!';\n    }\n}\n\nconsole.log(isKiss('I love JS')); // 'Good work Joe!'\nconsole.log(isKiss('This is complicated')); // 'Keep It Simple Stupid'"
+        "content": "function isKiss(words) {\n    const allWords = words.split(' ');\n    const wordCount = allWords.length;\n    const hasLongWord = allWords.some(word => word.length > wordCount);\n\n    if (hasLongWord) {\n        return 'Keep It Simple Stupid';\n    } else {\n        return 'Good work Joe!';\n    }\n}\n\nconsole.log(isKiss('I use JS')); // 'Good work Joe!'\nconsole.log(isKiss('This is complicated')); // 'Keep It Simple Stupid'"
       },
       {
         "title": "How it works",
