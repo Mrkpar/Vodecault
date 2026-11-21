@@ -1,6 +1,6 @@
 export const methodTopics = [
   {
-    "id": "tti-method-at",
+    "id": "tti-method-array-methods-at",
     "title": ".at()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -24,7 +24,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-concat",
+    "id": "tti-method-array-methods-concat",
     "title": ".concat()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -48,7 +48,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-entries",
+    "id": "tti-method-array-methods-entries",
     "title": ".entries()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -72,7 +72,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-every",
+    "id": "tti-method-array-methods-every",
     "title": ".every()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -96,7 +96,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-fill",
+    "id": "tti-method-array-methods-fill",
     "title": ".fill()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -120,7 +120,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-filter",
+    "id": "tti-method-array-methods-filter",
     "title": ".filter()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -144,7 +144,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-find",
+    "id": "tti-method-array-methods-find",
     "title": ".find()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -168,7 +168,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-findindex",
+    "id": "tti-method-array-methods-findindex",
     "title": ".findIndex()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -192,7 +192,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-findlast",
+    "id": "tti-method-array-methods-findlast",
     "title": ".findLast()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -216,7 +216,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-findlastindex",
+    "id": "tti-method-array-methods-findlastindex",
     "title": ".findLastIndex()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -240,7 +240,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-flat",
+    "id": "tti-method-array-methods-flat",
     "title": ".flat()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -264,7 +264,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-flatmap",
+    "id": "tti-method-array-methods-flatmap",
     "title": ".flatMap()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -288,7 +288,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-foreach",
+    "id": "tti-method-array-methods-foreach",
     "title": ".forEach()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -312,7 +312,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-array-from",
+    "id": "tti-method-array-methods-array-from",
     "title": "Array.from()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -336,7 +336,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-includes",
+    "id": "tti-method-array-methods-includes",
     "title": ".includes()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -360,7 +360,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-indexof",
+    "id": "tti-method-array-methods-indexof",
     "title": ".indexOf()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -384,7 +384,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-array-isarray",
+    "id": "tti-method-array-methods-array-isarray",
     "title": "Array.isArray()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -408,7 +408,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-join",
+    "id": "tti-method-array-methods-join",
     "title": ".join()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -432,7 +432,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-lastindexof",
+    "id": "tti-method-array-methods-lastindexof",
     "title": ".lastIndexOf()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -456,7 +456,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-length-array-array",
+    "id": "tti-method-array-methods-length-array",
     "title": ".length (array)",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -480,7 +480,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-map",
+    "id": "tti-method-array-methods-map",
     "title": ".map()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -504,7 +504,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-pop",
+    "id": "tti-method-array-methods-pop",
     "title": ".pop()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -528,7 +528,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-push",
+    "id": "tti-method-array-methods-push",
     "title": ".push()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -552,7 +552,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-reduce",
+    "id": "tti-method-array-methods-reduce",
     "title": ".reduce()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -576,7 +576,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-reduceright",
+    "id": "tti-method-array-methods-reduceright",
     "title": ".reduceRight()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -600,7 +600,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-reverse",
+    "id": "tti-method-array-methods-reverse",
     "title": ".reverse()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -624,7 +624,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-shift",
+    "id": "tti-method-array-methods-shift",
     "title": ".shift()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -648,7 +648,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-slice",
+    "id": "tti-method-array-methods-slice",
     "title": ".slice()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -672,7 +672,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-some",
+    "id": "tti-method-array-methods-some",
     "title": ".some()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -696,7 +696,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-sort",
+    "id": "tti-method-array-methods-sort",
     "title": ".sort()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -720,7 +720,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-splice",
+    "id": "tti-method-array-methods-splice",
     "title": ".splice()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -744,7 +744,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-unshift",
+    "id": "tti-method-array-methods-unshift",
     "title": ".unshift()",
     "category": "Array Methods",
     "difficulty": "Reference",
@@ -768,7 +768,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-charat",
+    "id": "tti-method-string-methods-charat",
     "title": ".charAt()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -792,7 +792,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-charcodeat",
+    "id": "tti-method-string-methods-charcodeat",
     "title": ".charCodeAt()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -816,7 +816,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-endswith",
+    "id": "tti-method-string-methods-endswith",
     "title": ".endsWith()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -840,7 +840,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-length-string-string",
+    "id": "tti-method-string-methods-length-string",
     "title": ".length (string)",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -864,7 +864,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-repeat",
+    "id": "tti-method-string-methods-repeat",
     "title": ".repeat()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -888,7 +888,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-replace",
+    "id": "tti-method-string-methods-replace",
     "title": ".replace()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -912,7 +912,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-replaceall",
+    "id": "tti-method-string-methods-replaceall",
     "title": ".replaceAll()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -936,7 +936,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-slice",
+    "id": "tti-method-string-methods-slice",
     "title": ".slice()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -960,7 +960,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-split",
+    "id": "tti-method-string-methods-split",
     "title": ".split()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -984,7 +984,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-startswith",
+    "id": "tti-method-string-methods-startswith",
     "title": ".startsWith()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1008,7 +1008,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-substring",
+    "id": "tti-method-string-methods-substring",
     "title": ".substring()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1032,7 +1032,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-tolowercase",
+    "id": "tti-method-string-methods-tolowercase",
     "title": ".toLowerCase()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1056,7 +1056,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-touppercase",
+    "id": "tti-method-string-methods-touppercase",
     "title": ".toUpperCase()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1080,7 +1080,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-trim",
+    "id": "tti-method-string-methods-trim",
     "title": ".trim()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1104,7 +1104,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-trimend",
+    "id": "tti-method-string-methods-trimend",
     "title": ".trimEnd()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1128,7 +1128,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-trimstart",
+    "id": "tti-method-string-methods-trimstart",
     "title": ".trimStart()",
     "category": "String Methods",
     "difficulty": "Reference",
@@ -1152,7 +1152,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-abs",
+    "id": "tti-method-math-number-math-abs",
     "title": "Math.abs()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1176,7 +1176,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-ceil",
+    "id": "tti-method-math-number-math-ceil",
     "title": "Math.ceil()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1200,7 +1200,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-floor",
+    "id": "tti-method-math-number-math-floor",
     "title": "Math.floor()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1224,7 +1224,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-max",
+    "id": "tti-method-math-number-math-max",
     "title": "Math.max()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1248,7 +1248,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-min",
+    "id": "tti-method-math-number-math-min",
     "title": "Math.min()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1272,7 +1272,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-pow",
+    "id": "tti-method-math-number-math-pow",
     "title": "Math.pow()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1296,7 +1296,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-round",
+    "id": "tti-method-math-number-math-round",
     "title": "Math.round()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1320,7 +1320,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-math-sqrt",
+    "id": "tti-method-math-number-math-sqrt",
     "title": "Math.sqrt()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1344,7 +1344,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-number-isfinite",
+    "id": "tti-method-math-number-number-isfinite",
     "title": "Number.isFinite()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1368,7 +1368,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-number-isinteger",
+    "id": "tti-method-math-number-number-isinteger",
     "title": "Number.isInteger()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1392,7 +1392,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-number-isnan",
+    "id": "tti-method-math-number-number-isnan",
     "title": "Number.isNaN()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1416,7 +1416,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-tofixed",
+    "id": "tti-method-math-number-tofixed",
     "title": ".toFixed()",
     "category": "Math & Number",
     "difficulty": "Reference",
@@ -1440,7 +1440,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-object-keys",
+    "id": "tti-method-objects-json-object-keys",
     "title": "Object.keys()",
     "category": "Objects & JSON",
     "difficulty": "Reference",
@@ -1464,7 +1464,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-object-values",
+    "id": "tti-method-objects-json-object-values",
     "title": "Object.values()",
     "category": "Objects & JSON",
     "difficulty": "Reference",
@@ -1488,7 +1488,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-object-is",
+    "id": "tti-method-objects-json-object-is",
     "title": "Object.is()",
     "category": "Objects & JSON",
     "difficulty": "Reference",
@@ -1512,7 +1512,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-json-parse",
+    "id": "tti-method-objects-json-json-parse",
     "title": "JSON.parse()",
     "category": "Objects & JSON",
     "difficulty": "Reference",
@@ -1536,7 +1536,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-json-stringify",
+    "id": "tti-method-objects-json-json-stringify",
     "title": "JSON.stringify()",
     "category": "Objects & JSON",
     "difficulty": "Reference",
@@ -1560,7 +1560,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-tostring",
+    "id": "tti-method-other-methods-tostring",
     "title": ".toString()",
     "category": "Other Methods",
     "difficulty": "Reference",
@@ -1584,7 +1584,7 @@ export const methodTopics = [
     ]
   },
   {
-    "id": "tti-method-valueof",
+    "id": "tti-method-other-methods-valueof",
     "title": ".valueOf()",
     "category": "Other Methods",
     "difficulty": "Reference",
