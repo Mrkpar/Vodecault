@@ -61,7 +61,8 @@ export function createCard(topic) {
     const sectionContent = document.createElement("pre");
     sectionContent.textContent = section.content;
 
-    let open = !isReferenceEntry;
+    const isReferenceSolution = section.title === "Reference solution";
+    let open = !isReferenceEntry && !isReferenceSolution;
     button.textContent = open ? `Hide ${section.title}` : `Show ${section.title}`;
     button.setAttribute("aria-expanded", String(open));
     sectionContent.style.display = open ? "block" : "none";
