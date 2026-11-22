@@ -23,7 +23,14 @@ export const kataTopics = [
       },
       {
         title: "Reference solution",
-        content: "function processSales(records) {\n  const sales = records\n    .map(record => {\n      const fields = record.split('|').map(field => field.trim());\n\n      if (fields.length !== 4) return null;\n\n      const [rawCustomer, rawProduct, rawPrice, rawQuantity] = fields;\n\n      const customer = rawCustomer\n        .toLowerCase()\n        .split(' ')\n        .filter(Boolean)\n        .map(word => word[0].toUpperCase() + word.slice(1))\n        .join(' ');\n\n      const product = rawProduct.toLowerCase();\n      const price = Number(rawPrice);\n      const quantity = Number(rawQuantity);\n\n      if (\n        !customer ||\n        !product ||\n        !Number.isFinite(price) ||\n        !Number.isInteger(quantity) ||\n        price <= 0 ||\n        quantity <= 0\n      ) {\n        return null;\n      }\n\n      const total = Math.round(price * quantity * 100) / 100;\n\n      return { customer, product, price, quantity, total };\n    })\n    .filter(Boolean)\n    .filter(sale => sale.total >= 20);\n\n  let totalRevenue = 0;\n  const reportLines = [];\n\n  sales.forEach(sale => {\n    totalRevenue += sale.total;\n    reportLines.push(\n      sale.customer + ' bought ' + sale.quantity + ' ' +\n      sale.product + ' for ' + sale.total.toFixed(2)\n    );\n  });\n\n  return {\n    sales,\n    totalRevenue: Math.round(totalRevenue * 100) / 100,\n    report: reportLines.join('\n')\n  };\n}"
+        content: "function processSales(records) {\n  const sales = records\n    .map(record => {\n      const fields = record.split('|').map(field => field.trim());\n\n      if (fields.length !== 4) return null;\n\n      const [rawCustomer, rawProduct, rawPrice, rawQuantity] = fields;\n\n      const customer = rawCustomer\n        .toLowerCase()\n        .split(' ')\n        .filter(Boolean)\n        .map(word => word[0].toUpperCase() + word.slice(1))\n        .join(' ');\n\n      const product = rawProduct.toLowerCase();\n      const price = Number(rawPrice);\n      const quantity = Number(rawQuantity);\n\n      if (\n        !customer ||\n        !product ||\n        !Number.isFinite(price) ||\n        !Number.isInteger(quantity) ||\n        price <= 0 ||\n        quantity <= 0\n      ) {\n        return null;\n      }\n\n      const total = Math.round(price * quantity * 100) / 100;\n\n      return { customer, product, price, quantity, total };\n    })\n    .filter(Boolean)\n    .filter(sale => sale.total >= 20);\n\n  let totalRevenue = 0;\n  const reportLines = [];\n\n  sales.forEach(sale => {\n    totalRevenue += sale.total;\n    reportLines.push(\n      sale.customer + ' bought ' + sale.quantity + ' ' +\n      sale.product + ' for ' + sale.total.toFixed(2)\n    );\n  });\n\n  const lastSaleSummary = reportLines.length ? reportLines.slice().pop() : '';
+
+  return {
+    sales,
+    totalRevenue: Math.round(totalRevenue * 100) / 100,
+    report: reportLines.join('\n'),
+    lastSaleSummary
+  };\n}"
       }
     ]
   },
