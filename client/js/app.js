@@ -2,6 +2,7 @@ import { topics } from "./data.js";
 import { javaTopics } from "./java.js";
 import { ttiTopics } from "./tti.js";
 import { methodTopics } from "./methods.js";
+import { kataTopics } from "./katas.js";
 import { createCard } from "./ui.js";
 import { renderTopics } from "./topics.js";
 import { renderSidebar } from "./sidebar.js";
@@ -9,7 +10,7 @@ import { groupTopicsByCategory } from "./utils.js";
 import { getFavorites } from "./favorites.js";
 import { filterTopics } from "./search.js";
 
-const allTopics = [...topics, ...javaTopics, ...ttiTopics, ...methodTopics];
+const allTopics = [...topics, ...javaTopics, ...ttiTopics, ...methodTopics, ...kataTopics];
 
 const content = document.querySelector("#content");
 const navList = document.querySelector("#nav-list");
