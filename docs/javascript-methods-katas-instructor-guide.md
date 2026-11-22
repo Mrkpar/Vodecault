@@ -15,6 +15,7 @@ Every method from the original three lists is exercised in at least one referenc
 - Array: `forEach()` — accumulate revenue and build report lines.
 - Array: `push()` — append report lines.
 - Array: `join()` — combine report lines into one string.
+- Array: `slice()` and `pop()` — retrieve the final report line from a copy without changing the report.
 - String: `split()` — separate record fields and customer-name words.
 - String: `trim()` — remove whitespace around fields.
 - String: `toLowerCase()` — normalise names and product names.
@@ -62,13 +63,6 @@ Every method from the original three lists is exercised in at least one referenc
 - Math: `Math.abs()` — calculate the distance from minimum stock.
 - Math: `Math.floor()` — count complete boxes.
 - Math: `Math.ceil()` — calculate boxes needed to reach minimum stock.
-
-### Warm-up — The Report Editor
-
-**Intent:** Practise removing the final array element without mutating the original array.
-
-- Array: `slice()` — make a copy before changing it.
-- Array: `pop()` — remove and return the final line from the copy.
 
 ## Full original target list
 
