@@ -11,7 +11,7 @@ export const kataTopics = [
       },
       {
         title: "Requirements",
-        content: "1. Split each record into its four fields.\n2. Remove unnecessary spaces around every field.\n3. Format customer names in title case (for example, 'jOHN sMITH' becomes 'John Smith').\n4. Convert product names to lowercase.\n5. Convert price and quantity to numbers.\n6. Reject records that do not have exactly four fields, have empty names, have non-finite prices, have non-integer quantities, or have a price/quantity that is not positive.\n7. Calculate each sale total and round it to two decimal places.\n8. Keep only sales whose total is at least 20.\n9. Calculate the combined revenue and create one report line per remaining sale.\n10. Return an object with sales, totalRevenue and report."
+        content: "1. Split each record into its four fields.\n2. Remove unnecessary spaces around every field.\n3. Format customer names in title case (for example, 'jOHN sMITH' becomes 'John Smith').\n4. Convert product names to lowercase.\n5. Convert price and quantity to numbers.\n6. Reject records that do not have exactly four fields, have empty names, have non-finite prices, have non-integer quantities, or have a price/quantity that is not positive.\n7. Calculate each sale total and round it to two decimal places.\n8. Keep only sales whose total is at least 20.\n9. Calculate the combined revenue and create one report line per remaining sale.\n10. Also return lastSaleSummary: the final report line, or an empty string when there are no qualifying sales.\n11. Return an object with sales, totalRevenue, report and lastSaleSummary."
       },
       {
         title: "Example input",
@@ -19,7 +19,7 @@ export const kataTopics = [
       },
       {
         title: "Expected output shape",
-        content: "{\n  sales: [\n    {\n      customer: 'John Smith',\n      product: 'laptop',\n      price: 899.99,\n      quantity: 1,\n      total: 899.99\n    }\n  ],\n  totalRevenue: 899.99,\n  report: 'John Smith bought 1 laptop for 899.99'\n}\n\nThis is only an illustration of the shape. Your function must process every input record."
+        content: "{\n  sales: [\n    {\n      customer: 'John Smith',\n      product: 'laptop',\n      price: 899.99,\n      quantity: 1,\n      total: 899.99\n    }\n  ],\n  totalRevenue: 899.99,\n  report: 'John Smith bought 1 laptop for 899.99',\n  lastSaleSummary: 'John Smith bought 1 laptop for 899.99'\n}\n\nThis is only an illustration of the shape. Your function must process every input record."
       },
       {
         title: "Reference solution",
@@ -51,7 +51,7 @@ export const kataTopics = [
       },
       {
         title: "Reference solution",
-        content: "function analyzeStudents(students, searchTerm) {\n  const activeStudents = students\n    .filter(student =>\n      student.active &&\n      typeof student.name === 'string' &&\n      student.name.trim() &&\n      Array.isArray(student.grades) &&\n      student.grades.length > 0 &&\n      student.grades.every(Number.isFinite)\n    )\n    .map(student => ({\n      ...student,\n      average: student.grades.reduce((sum, grade) => sum + grade, 0) /\n        student.grades.length,\n      initial: student.name.substring(0, 1)\n    }));\n\n  const averages = activeStudents.map(student => student.average);\n  const highestAverage = averages.length ? Math.max(...averages) : null;\n  const lowestAverage = averages.length ? Math.min(...averages) : null;\n\n  const highest = activeStudents.find(student =>\n    student.average === highestAverage\n  ) || null;\n  const lowest = activeStudents.find(student =>\n    student.average === lowestAverage\n  ) || null;\n\n  const overallAverage = activeStudents.length\n    ? activeStudents.reduce((sum, student) => sum + student.average, 0) /\n      activeStudents.length\n    : 0;\n\n  const term = String(searchTerm || '').toLowerCase();\n  const nameMatches = term ? activeStudents.filter(student =>\n    student.name.toLowerCase().includes(term)\n  ) : [];\n  const prefixMatches = term ? activeStudents.filter(student =>\n    student.name.toLowerCase().startsWith(term)\n  ) : [];\n  const suffixMatches = term ? activeStudents.filter(student =>\n    student.name.toLowerCase().endsWith(term)\n  ) : [];\n\n  const ranking = activeStudents\n    .slice()\n    .sort((a, b) => b.average - a.average);\n\n  return {\n    students: activeStudents,\n    highest,\n    lowest,\n    hasOutstandingStudent: activeStudents.some(student => student.average > 90),\n    allPassed: activeStudents.length > 0 &&\n      activeStudents.every(student => student.average >= 40),\n    overallAverage: Math.round(overallAverage * 100) / 100,\n    overallAverageWhole: Math.trunc(overallAverage),\n    ranking,\n    reverseRanking: ranking.slice().reverse(),\n    topThree: ranking.slice(0, 3),\n    perfectScoreStudents: activeStudents.filter(student =>\n      student.grades.includes(100)\n    ),\n    nameMatches,\n    prefixMatches,\n    suffixMatches,\n    searchedStudent: nameMatches[0] || null\n  };\n}"
+        content: "function analyzeStudents(students, searchTerm) {\n  const activeStudents = students\n    .filter(student =>\n      student.active &&\n      typeof student.name === 'string' &&\n      student.name.trim() &&\n      Array.isArray(student.grades) &&\n      student.grades.length > 0 &&\n      student.grades.every(Number.isFinite)\n    )\n    .map(student => ({\n      ...student,\n      name: student.name.trim(),\n      average: student.grades.reduce((sum, grade) => sum + grade, 0) /\n        student.grades.length,\n      initial: student.name.trim().substring(0, 1)\n    }));\n\n  const averages = activeStudents.map(student => student.average);\n  const highestAverage = averages.length ? Math.max(...averages) : null;\n  const lowestAverage = averages.length ? Math.min(...averages) : null;\n\n  const highest = activeStudents.find(student =>\n    student.average === highestAverage\n  ) || null;\n  const lowest = activeStudents.find(student =>\n    student.average === lowestAverage\n  ) || null;\n\n  const overallAverage = activeStudents.length\n    ? activeStudents.reduce((sum, student) => sum + student.average, 0) /\n      activeStudents.length\n    : 0;\n\n  const term = String(searchTerm || '').trim().toLowerCase();\n  const nameMatches = term ? activeStudents.filter(student =>\n    student.name.toLowerCase().includes(term)\n  ) : [];\n  const prefixMatches = term ? activeStudents.filter(student =>\n    student.name.toLowerCase().startsWith(term)\n  ) : [];\n  const suffixMatches = term ? activeStudents.filter(student =>\n    student.name.toLowerCase().endsWith(term)\n  ) : [];\n\n  const ranking = activeStudents\n    .slice()\n    .sort((a, b) => b.average - a.average);\n\n  return {\n    students: activeStudents,\n    highest,\n    lowest,\n    hasOutstandingStudent: activeStudents.some(student => student.average > 90),\n    allPassed: activeStudents.length > 0 &&\n      activeStudents.every(student => student.average >= 40),\n    overallAverage: Math.round(overallAverage * 100) / 100,\n    overallAverageWhole: Math.trunc(overallAverage),\n    ranking,\n    reverseRanking: ranking.slice().reverse(),\n    topThree: ranking.slice(0, 3),\n    perfectScoreStudents: activeStudents.filter(student =>\n      student.grades.includes(100)\n    ),\n    nameMatches,\n    prefixMatches,\n    suffixMatches,\n    searchedStudent: nameMatches[0] || null\n  };\n}"
       }
     ]
   },
@@ -88,25 +88,5 @@ export const kataTopics = [
       }
     ]
   },
-  {
-    id: "js-kata-pop-warmup",
-    title: "Warm-up — The Report Editor",
-    category: "JavaScript Methods Katas",
-    difficulty: "Beginner",
-    sections: [
-      {
-        title: "The task",
-        content: "You have an array of report lines. Write removeLastReportLine(lines), which removes the final line and returns both the removed line and the remaining lines. Do not change the original array."
-      },
-      {
-        title: "Example",
-        content: "const lines = ['Sales: 4', 'Revenue: 250.00', 'Out of stock: 1'];\n\nremoveLastReportLine(lines);\n// {\n//   removed: 'Out of stock: 1',\n//   remaining: ['Sales: 4', 'Revenue: 250.00']\n// }"
-      },
-      {
-        title: "Reference solution",
-        content: "function removeLastReportLine(lines) {\n  const remaining = lines.slice();\n  const removed = remaining.pop();\n\n  return {\n    removed,\n    remaining\n  };\n}"
-      }
-    ]
-  }
 
 ];
